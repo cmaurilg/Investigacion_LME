@@ -1,0 +1,18 @@
+ /*Parrafos*/
+  p {
+      text-align: justify;
+  }
+
+  li>a{
+    font-weight: bold;
+    font-size: 1.1rem;
+    color:azure;
+  }
+  h1{
+    font-weight: bolder;
+  }
+  section>img{
+    width: 100px;
+    height: 150px;
+    margin: 0 auto;
+  }
