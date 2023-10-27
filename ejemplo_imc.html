@@ -1,73 +1,58 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calcular IMC</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JAVASCRIPT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/base/base.css" />
+    <link rel="stylesheet" href="./assets/css/componentes/header.css" />
+    <link rel="stylesheet" href="./assets/css/componentes/card.css" />
+    <link rel="stylesheet" href="./assets/css/registry_client.css" />
+    <link rel="stylesheet" href="./assets/css/componentes/inputs.css" />
+    <link rel="stylesheet" href="./assets/css/componentes/button.css" />
+    <link rel="stylesheet" href="./assets/css/cadastro_produto.css" />
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <a href="index.html">Pagina Pp</a>
-    <script>
-        //Función para calcular el índice de masa corporal (IMC)
-        function CalcularIMC(sexo, altura, peso) {
-            //La función Math.roud sirve para redondear valores
-            altura = Math.round(altura) / 100;
-            peso = Math.round(peso);
-            //La función Math.pow sirve para calcular potencias
-            var indice = (peso / Math.pow(altura, 2));
-            var resultado = "";
-            //Sexo, si es "m" mujer y si es "h" hombre
-            switch (sexo) {
-                case "m":
-                    if (indice < 20) {
-                        resultado = "Peso inferior al normal.";
-                    }
-                    else if (indice >= 20 && indice < 24) {
-                        resultado = "Peso Normal.";
-                    }
-                    else if (indice >= 24 && indice < 29) {
-                        resultado = "Peso superior al normal.";
-                    }
-                    else {
-                        resultado = "Obesidad.";
-                    }
-                    break
-                case "h":
-                    if (indice < 21) {
-                        resultado = "Peso inferior al normal.";
-                    }
-                    else if (indice >= 21 && indice < 25) {
-                        resultado = "Peso Normal.";
-                    }
-                    else if (indice >= 25 && indice < 30) {
-                        resultado = "Peso superior al normal.";
-                    }
-                    else {
-                        resultado = "Obesidad";
-                    }
-                    break
-                default:
-                    resultado = "No se ha podido calcular. No ha indicado h (hombre) o m (mujer).";
-            }
-            //Con toFixed reduciremos a 2 el número de decimales a mostrar
-            return "Su IMC es: " + indice.toFixed(2) + " y su clasificación es: " + resultado;
-        }
 
-        //Función para mostrar el resultado por pantalla
-        function MostrarResultadoIMC(sexo, altura, peso, indice) {
-            var mensaje = "Usted mide " + altura / 100 + " metros y pesa " + peso + " Kg. \n \n " + indice;
-            alert(mensaje);
-        }
+    <header class="cabecalho container">
+        <img src="./assets/img/javascript.svg" alt="Logo Doguito" class="cabecalho__logo" />
 
-        //Petición de datos al usuario (sexo, altura, peso)
-        var sexo = prompt("Indique su sexo, una 'h' para hombre o una 'm' para mujer:", "");
-        //La función parseInt permite convertir un string en número
-        var altura = parseInt(prompt("Indique su altura en centímetros:", ""));
-        var peso = parseInt(prompt("Indique su peso en kilógramos:", ""));
+        <nav>
+            <ul class="header__list-nav">
+                <li class="header__link"><a href="#">Inicio</a></li>
+                <li class="header__link"><a href="#">Ejemplo IMC</a></li>
+                <li class="header__link"><a href="#">Ejemplo Registro</a></li>
+                <li class="header__link"><a href="#">Ejemplo Productos</a></li>
+                <li class="header__link"><a href="#">Creadores</a></li>
+            </ul>
+        </nav>
 
-        //Llamamos a las funciones anteriores para el cálculo y para mostrar los resultados
-        var resultado = CalcularIMC(sexo, altura, peso);
-        MostrarResultadoIMC(sexo, altura, peso, resultado);   
-    </script>
+    </header>
+    <main class="container flex-column flex--center">
+        <section class="cartao cadastro">
+            <h1 class="card__title flex flex--center" style="color: aliceblue;">CALCULO DE IMC</h1>
+        </section>
+        <section class="flex flex--column flex flex--center">
+            <div class="input-container registry__price-container">
+                <input id="peso" class="input" type="text" required />
+                <label class="input-label" for="peso">Peso (kg):</label>
+            </div>
+            <div class="input-container registry__price-container">
+                <input id="altura" class="input" type="text" required />
+                <label class="input-label" for="altura">Altura (m):</label>
+            </div>
+            <button class="button" onclick="calcularIMC()">Calcular</button>
+        </section><br>
+    <section class="cartao cadastro">
+        <h1 id="resultado" type="text" class="card__title flex flex--center" style="color: aliceblue;"></h1>
+    </section>   
+    </main>
+    <script src="js/imc.js"></script>
 </body>
+
 </html>
