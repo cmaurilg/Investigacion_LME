@@ -58,21 +58,43 @@
                     procesos intermedios.</p>
             </section><br><br>
 
-            <section class="cadastro flex flex--center">
-                <h1 class="card__title">TEMA 2</h1>
-                <p>Desarrollo</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus cum similique, voluptate vitae
-                    voluptatem
-                    quisquam quos obcaecati, odit adipisci dignissimos consectetur non architecto autem voluptas laborum
-                    expedita doloribus nobis! Doloremque.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio illo voluptatem blanditiis odio
-                    tempora quibusdam nobis qui, similique itaque consequuntur laborum. Eum sapiente obcaecati debitis
-                    sed
-                    porro eveniet dicta temporibus!</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore expedita magnam commodi temporibus
-                    maxime repellat, qui, recusandae totam exercitationem necessitatibus, enim deserunt nisi maiores
-                    voluptatum quae neque dignissimos. A, velit.</p>
+          <section class="cadastro flex flex--center">
+                <h1 class="card__title">Como utilizar JavaScript en una página web</h1>
+                <p>Existen tres técnicas para incorporar código JavaScript dentro de HTML. Sin embargo, al igual que en CSS, solo la inclusión de archivos externos es la recomendada a usar en HTML5.
+                </p>
+                <p>
+                    Esta es una técnica simple para insertar Javascript en nuestro documento que sea provecha de atributos disponibles en elementos HTML. Estos atributos son manejadores de eventos que ejecutan código de acuerdo a la acción del usuario
+                </p>
+                <p>
+                    Los manejadores de eventos más usados son, en general, los relacionados con el ratón, como por ejemplo onclick, onMouseOver, u onMouseOut. Sin embargo, encontraremos sitios web que implementan eventos de teclado y de la ventana, ejecutando acciones luego de que una tecla es presionada o alguna condición en la ventana del navegador cambia (por ejemplo, onload u onfocus).
+                </p>
+                <p>
+                    Usando el manejador de eventos onclick en el Listado 4-1, un código es ejecutado cada vez que el usuario hace clic con el ratón sobre el texto que dice “Hacer Clic”. Lo que el manejador onclick está diciendo es algo como: “cuando alguien haga clic sobre este elemento ejecute este código” y el código en este caso es una función predefinida en Javascript que muestra una pequeña ventana con el mensaje “hizo clic!”.
+                </p>
+                <p>
+                    Para trabajar con códigos extensos y funciones personalizadas debemos agrupar los códigos en un mismo lugar entre etiquetas script. El elemento script nos ayuda a organizar el código en un solo lugar, afectando a los elementos HTML por medio de referencias. Del mismo modo que con el elemento style , en HTML5 no debemos usar ningún atributo para especificar lenguaje. HTML5 asigna Javascript por defecto.
+                </p>
+
+                <p>
+                    El elemento script y su contenido pueden ser posicionados en cualquier lugar del
+                    documento, dentro de otros elementos o entre ellos. Para mayor claridad, recomendamos
+                    siempre colocar sus códigos JavaScript en la cabecera del documento y luego
+                    referenciar los elementos a ser afectados usando los métodos JavaScript apropiados para ese propósito.
+                </p>
+                <p>
+                    Los códigos Javascript crecen exponencialmente cuando agregamos nuevas funciones y
+                    aplicamos algunas de las APIs mencionadas previamente. Códigos embebidos incrementan
+                    el tamaño de nuestros documentos y los hacen repetitivos (cada documento debe volver a
+                    incluir los mismos códigos). Para reducir los tiempos de descarga, incrementar nuestra
+                    productividad y poder distribuir y reusar nuestros códigos en cada documento sin
+                    comprometer eficiencia, recomendamos grabar todos los códigos Javascript en uno o más
+                    archivos externos y llamarlos usando el atributo src:
+                </p>
+                <p>
+                    El elemento script carga los códigos JavaScript desde un archivo externo llamado micodigo.js. De ahora en más, podremos insertar nuestros códigos en este archivo y luego incluir el mismo en cualquier documento de nuestro sitio web que lo necesite. Desde la perspectiva del usuario, esta práctica reduce tiempos de descarga y acceso a nuestro sitio web, mientras que para nosotros simplifica la organización y facilita el mantenimiento.
+                </p>
             </section><br><br>
+
 
             <section class="cadastro flex flex--center">
                 <h1 class="card__title">Variables de JavaScript</h1>
