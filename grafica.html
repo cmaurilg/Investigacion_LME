@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Doguito Petshop | Registrar producto</title>
+  <title>Grafica de Barras</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="./assets/css/base/base.css" />
@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="./assets/css/componentes/button.css" />
   <link rel="stylesheet" href="./assets/css/cadastro_produto.css" />
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 </head>
 
 <body>
@@ -32,29 +33,11 @@
     </nav>
 
 </header>
-  <main class="container flex flex--center flex--column">
-    <section class="cartao cadastro">
-      <h1 class="card__title">Registrar producto</h1>
-      <form action="./registro_producto_concluido.html" class="flex flex--column">
-        <div class="input-container">
-          <input name="name" id="name" class="input" type="text" placeholder="Nombre" />
-          <label class="input-label" for="name">Nombre</label>
-          <span class="input-message-error">Este campo no es valido</span>
-        </div>
-        <div class="input-container registry__price-container">
-          <input name="price" id="price" class="input" type="text" placeholder="Precio" />
-          <label class="input-label" for="price">Precio</label>
-          <span class="input-message-error">Este campo no es valido</span>
-        </div>
-        <div class="input-container registry__description-container">
-          <input class="input" name="description" id="description" placeholder="Descripción" />
-          <label class="input-label" for="description">Descripción</label>
-          <span class="input-message-error">Este campo no es valido</span>
-        </div>
-        <button class="button">Registrar producto</button>
-      </form>
-    </section>
-  </main>
+<section class="cadastro flex flex--center">
+  <h1 class="card__title">GRAFICA DE BARRAS</h1>
+  <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+  </section><br><br>
+<script src="js/graficadebarras.js"></script>
 </body>
 
 </html>
